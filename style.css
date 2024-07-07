@@ -1,0 +1,268 @@
+/* Resetting default body styles */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right top,
+    #331fbb,
+    #1c2199,
+    #0d1f78,
+    #0c1a56,
+    #0e1435,
+    #151834,
+    #1a1c32,
+    #1f2031,
+    #30314f,
+    #424470,
+    #555792,
+    #6a6ab5
+  );
+  overflow: hidden;
+}
+
+/* Styling of the main container */
+.container {
+  width: 40em;
+  height: 40em;
+  position: relative;
+  font-size: 6px;
+}
+
+/* Styling for images inside the container */
+img {
+  height: 130%;
+  width: 130%;
+}
+
+/* Styling for the Sun */
+.sun {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  top: 15em;
+  left: 15em;
+  border-radius: 50%;
+  box-shadow: 0 0 3em rgb(255, 128, 0);
+  animation: orbit 50s linear infinite;
+}
+
+/* Styling for Planets */
+.planet {
+  position: absolute;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  border-width: 0.2em 0.2em 0 0;
+  border-radius: 50%;
+}
+
+.planet::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: orbit 30s linear infinite;
+}
+
+/* Styling for Mercury */
+.mercury::before {
+  background-image: url(media/images/mercury.png);
+  background-size: cover;
+  top: 1.5em;
+  right: 0.8em;
+  width: 2em;
+  height: 2em;
+}
+
+.mercury {
+  top: 12.5em;
+  left: 12.5em;
+  width: 15em;
+  height: 15em;
+  animation: orbit 68.7s linear infinite;
+}
+
+/* Styling for the Venus */
+.venus::before {
+  background-image: url(media/images/venus.png);
+  background-size: cover;
+  top: 2em;
+  right: 2em;
+  width: 2em;
+  height: 2em;
+}
+
+.venus {
+  top: 10em;
+  left: 10em;
+  width: 20em;
+  height: 20em;
+  animation: orbit 48.7s linear infinite;
+}
+
+/* Styling for the Earth */
+.earth::before {
+  background-image: url(media/images/earth.png);
+  background-size: cover;
+  top: 3em;
+  right: 0em;
+  width: 5em;
+  height: 5em;
+}
+
+.earth {
+  top: 6em;
+  left: 6em;
+  width: 28em;
+  height: 28em;
+  animation: orbit 36.5s linear infinite;
+}
+
+/* Styling for the Moon */
+.moon::before {
+  background-image: url(media/images/moon.png);
+  background-size: cover;
+  top: 0.8em;
+  right: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.moon {
+  top: 2em;
+  right: -1em;
+  width: 7em;
+  height: 7em;
+  animation: orbit 2.7s linear infinite;
+}
+
+/* Styling for the Mars */
+.mars::before {
+  background-image: url(media/images/mars.png);
+  background-size: cover;
+  top: 5em;
+  right: 3em;
+  width: 3em;
+  height: 3em;
+}
+
+.mars {
+  top: 2em;
+  left: 2.5em;
+  width: 36em;
+  height: 36em;
+  animation: orbit 26.5s linear infinite;
+}
+
+/* Styloing for the Jupiter */
+.jupiter::before {
+  background-image: url(media/images/jupiter.png);
+  background-size: cover;
+  top: 6em;
+  right: 3em;
+  width: 5em;
+  height: 5em;
+}
+
+.jupiter {
+  top: -2em;
+  left: -2em;
+  width: 45em;
+  height: 45em;
+  animation: orbit 21s linear infinite;
+}
+
+/* Styling for the Saturn */
+.saturn::before {
+  background-image: url(media/images/saturn.png);
+  background-size: cover;
+  top: 7.5em;
+  right: 5em;
+  width: 4.5em;
+  height: 4.5em;
+}
+
+.saturn {
+  top: -7em;
+  left: -7em;
+  width: 55em;
+  height: 55em;
+  animation: orbit 17s linear infinite;
+}
+
+/* Styling for the Uranus */
+.uranus::before {
+  background-image: url(media/images/uranus.png);
+  background-size: cover;
+  top: 9em;
+  right: 6.5em;
+  width: 4em;
+  height: 4em;
+}
+
+.uranus {
+  top: -12em;
+  left: -12em;
+  width: 65em;
+  height: 65em;
+  animation: orbit 19s linear infinite;
+}
+
+/* Styling for the Neptune */
+.neptune::before {
+  background-image: url(media/images/neptune.png);
+  background-size: cover;
+  top: 10em;
+  right: 8em;
+  width: 4em;
+  height: 4em;
+}
+
+.neptune {
+  top: -17em;
+  left: -17em;
+  width: 75em;
+  height: 75em;
+  animation: orbit 15s linear infinite;
+}
+
+/* Styling for the Pluto */
+.pluto::before {
+  background-image: url(media/images/pluto.png);
+  background-size: cover;
+  top: 11em;
+  right: 10em;
+  width: 4em;
+  height: 4em;
+}
+
+.pluto {
+  top: -22em;
+  left: -22em;
+  width: 85em;
+  height: 85em;
+  animation: orbit 18s linear infinite;
+}
+
+/* Styling for Stars */
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Animation keyframes for orbiting */
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
